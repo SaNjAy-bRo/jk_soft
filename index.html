@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JK Soft Digital Marketing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0F172A",
+            slatebg: "#0B1220",
+            accent: "#F7941D",
+            secondary: "#207DE9"
+          },
+          fontFamily: {
+            heading: ["Inter", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          },
+          boxShadow: {
+            glow: "0 20px 60px rgba(245, 128, 37, 0.25)"
+          },
+          keyframes: {
+            floatUp: {
+              "0%": { transform: "translateY(18px)", opacity: "0" },
+              "100%": { transform: "translateY(0)", opacity: "1" }
+            },
+            softPulse: {
+              "0%": { transform: "scale(1)" },
+              "50%": { transform: "scale(1.02)" },
+              "100%": { transform: "scale(1)" }
+            }
+          },
+          animation: {
+            floatUp: "floatUp 900ms ease-out both",
+            softPulse: "softPulse 3s ease-in-out infinite"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slatebg text-white">
+ 
+
+  <header id="siteHeader" class="site-header absolute top-0 left-0 w-full z-30 transition duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-3">
+      <img src="images/logo.svg" alt="JK Soft logo" class="h-20 w-auto" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden items-center gap-10 text-sm font-light text-white/80 md:flex">
+      <a href="#home" class="uppercase tracking-[0.3em] hover:text-white">Home</a>
+
+      <!-- Services Mega Menu -->
+      <div class="relative">
+        <button id="servicesToggle" type="button" class="flex items-center gap-2 uppercase tracking-[0.3em] hover:text-white">
+          Services
+          <ion-icon name="chevron-down-outline" class="text-sm"></ion-icon>
+        </button>
+
+        <div id="servicesMenu"
+          class="mega-menu hidden absolute left-1/2 top-full mt-6 w-[520px] -translate-x-1/2 rounded-3xl border border-white/10 bg-slatebg/95 p-6 shadow-xl backdrop-blur">
+          <p class="text-xs tracking-[0.2em] text-white/60">Choose a service</p>
+
+          <div class="mt-4 grid grid-cols-2 gap-4 text-sm text-white/80">
+            <a href="website-design-development.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="color-palette-outline" class="text-lg text-accent"></ion-icon>
+              Website Design & Development
+            </a>
+
+            <a href="digital-marketing.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="trending-up-outline" class="text-lg text-accent"></ion-icon>
+              Digital Marketing
+            </a>
+
+            <a href="social-media-management.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="people-outline" class="text-lg text-accent"></ion-icon>
+              Social Media Management
+            </a>
+
+            <a href="google-ads.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="megaphone-outline" class="text-lg text-accent"></ion-icon>
+              Google Ads
+            </a>
+
+            <a href="whatsapp-marketing.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="chatbubble-ellipses-outline" class="text-lg text-accent"></ion-icon>
+              WhatsApp Marketing
+            </a>
+
+            <a href="erp-solutions.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="layers-outline" class="text-lg text-accent"></ion-icon>
+              ERP Solutions
+            </a>
+
+            <a href="app-development.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="phone-portrait-outline" class="text-lg text-accent"></ion-icon>
+              App Development
+            </a>
+
+            <!-- SEO ADDED -->
+            <a href="seo.html"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+              <ion-icon name="search-outline" class="text-lg text-accent"></ion-icon>
+              SEO
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="reviews.html" class="uppercase tracking-[0.3em] hover:text-white">Reviews</a>
+      <a href="contact.html" class="uppercase tracking-[0.3em] hover:text-white">Contact</a>
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-3">
+      <a href="tel:+919247817555" class="hidden btn btn-secondary btn-small md:inline-flex">
+        <ion-icon name="call-outline" class="text-lg"></ion-icon>
+        +91 9247817555
+      </a>
+      <a href="https://wa.me/919247817555" class="whatsapp-pill md:inline-flex" aria-label="WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </a>
+      <button id="mobileMenu" class="mobile-menu-btn md:hidden" aria-label="Open menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobileNav" class="mobile-nav hidden">
+    <div class="mx-auto max-w-6xl px-6 py-6">
+      <div class="flex flex-col gap-4 text-base font-semibold text-white">
+        <a href="#home" class="mobile-link">Home</a>
+
+        <button type="button" class="mobile-link mobile-services-toggle" data-mobile-services>
+          Services
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+
+        <div class="mobile-services hidden">
+          <a href="website-design-development.html"><ion-icon name="color-palette-outline"></ion-icon>Website Design & Development</a>
+          <a href="digital-marketing.html"><ion-icon name="trending-up-outline"></ion-icon>Digital Marketing</a>
+          <a href="social-media-management.html"><ion-icon name="people-outline"></ion-icon>Social Media Management</a>
+          <a href="google-ads.html"><ion-icon name="megaphone-outline"></ion-icon>Google Ads</a>
+          <a href="whatsapp-marketing.html"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>WhatsApp Marketing</a>
+          <a href="erp-solutions.html"><ion-icon name="layers-outline"></ion-icon>ERP Solutions</a>
+          <a href="app-development.html"><ion-icon name="phone-portrait-outline"></ion-icon>App Development</a>
+          <!-- SEO ADDED -->
+          <a href="seo.html"><ion-icon name="search-outline"></ion-icon>SEO</a>
+        </div>
+
+        <a href="reviews.html" class="mobile-link">Reviews</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+
+      <div class="mt-6 flex gap-3">
+        <a href="tel:+919247817555" class="mobile-action">
+          <ion-icon name="call-outline"></ion-icon>
+          Call
+        </a>
+        <a href="https://wa.me/919247817555" class="mobile-action mobile-action-wa">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section id="home" class="hero-animated relative min-h-screen overflow-hidden">
+      <canvas id="heroCanvas"></canvas>
+      <div class="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-28 md:grid md:grid-cols-[minmax(0,1fr)_380px] md:items-center md:gap-16">
+        <div class="max-w-none">
+          <span class="pill-label inline-flex w-fit items-center">Full-Service Digital Agency</span>
+          <h1 class="mt-6 font-heading text-4xl leading-tight text-white md:text-6xl">
+            <span class="font-extrabold">We build brands</span><br />
+            <span class="font-normal text-[1.05em]">that dominate online</span>
+          </h1>
+          <h3 class="mt-6 max-w-2xl text-xl font-light text-white/70 md:text-2xl">
+            Strategic marketing and custom software solutions designed to outperform your competition
+          </h3>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <button type="button" class="hero-cta-outline" data-quote-open>
+              <ion-icon name="sparkles-outline" class="text-lg"></ion-icon>
+              Request a Quote
+            </button>
+            <a href="#services" class="hero-cta-outline hero-cta-outline-blue">
+              <ion-icon name="compass-outline" class="text-lg"></ion-icon>
+              Explore Services
+            </a>
+          </div>
+          <div class="mt-12 overflow-hidden">
+            <div class="logo-marquee flex items-center gap-10">
+              <img src="images/html.svg" alt="HTML" class="h-8 opacity-70" />
+              <img src="images/css.svg" alt="CSS" class="h-8 opacity-70" />
+              <img src="images/bootstrap.svg" alt="Bootstrap" class="h-8 opacity-70" />
+              <img src="images/tailwind.svg" alt="Tailwind" class="h-8 opacity-70" />
+              <img src="images/java.svg" alt="Java" class="h-8 opacity-70" />
+              <img src="images/react-native.svg" alt="React Native" class="h-8 opacity-70" />
+              <img src="images/wordpress.svg" alt="WordPress" class="h-8 opacity-70" />
+              <img src="images/google-ads.svg" alt="Google Ads" class="h-8 opacity-70" />
+              <img src="images/meta.svg" alt="Meta" class="h-8 opacity-70" />
+              <img src="images/google-analytics.svg" alt="Google Analytics" class="h-8 opacity-70" />
+              <img src="images/html.svg" alt="HTML" class="h-8 opacity-70" />
+              <img src="images/css.svg" alt="CSS" class="h-8 opacity-70" />
+              <img src="images/bootstrap.svg" alt="Bootstrap" class="h-8 opacity-70" />
+              <img src="images/tailwind.svg" alt="Tailwind" class="h-8 opacity-70" />
+              <img src="images/java.svg" alt="Java" class="h-8 opacity-70" />
+              <img src="images/react-native.svg" alt="React Native" class="h-8 opacity-70" />
+              <img src="images/wordpress.svg" alt="WordPress" class="h-8 opacity-70" />
+              <img src="images/google-ads.svg" alt="Google Ads" class="h-8 opacity-70" />
+              <img src="images/meta.svg" alt="Meta" class="h-8 opacity-70" />
+              <img src="images/google-analytics.svg" alt="Google Analytics" class="h-8 opacity-70" />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end md:pt-10 mt-8 md:mt-0">
+          <div class="hero-glass-card w-full max-w-[380px]">
+            <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-white">Request a call back</h2>
+            <form class="mt-5 grid gap-5">
+              <input type="text" class="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none focus:border-white/40" placeholder="Your name" />
+              <input type="tel" class="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none focus:border-white/40" placeholder="Phone number" />
+              <button type="submit" class="hero-cta-outline hero-cta-outline-blue w-full justify-center">
+                Submit
+              </button>
+              <p class="mt-1 flex items-center justify-center gap-2 text-xs text-white/60">
+                <ion-icon name="lock-closed-outline" class="text-sm"></ion-icon>
+                We respect your privacy
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <a href="#services" class="hero-scroll" aria-label="Scroll to services">
+        <span class="hero-scroll-ring"></span>
+        <ion-icon name="arrow-down-outline"></ion-icon>
+      </a>
+    </section>
+
+    <section id="services" class="bg-white text-ink">
+      <div class="mx-auto max-w-6xl px-6 py-24">
+        <div class="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-xl">
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Services</p>
+            <h2 class="section-title text-3xl md:text-5xl">Everything you need to grow online</h2>
+            <p class="mt-4 text-slate-600">Design, marketing, and software support under one roof.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Request a Quote</a>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-4">
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="color-palette-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">Website Design & Development</h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Modern UI and UX</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Responsive layouts</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Lead focused pages</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Fast load performance</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>SEO-ready setup</span></li>
+            </ul>
+            
+          </div>
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="trending-up-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">Digital Marketing</h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Strategy and planning</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Lead generation</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Campaign management</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Conversion tracking</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Monthly reports</span></li>
+            </ul>
+            
+          </div>
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="cart-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">E-Commerce</h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Store setup</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Product management</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Payment integration</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Order tracking</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Conversion improvements</span></li>
+            </ul>
+            
+          </div>
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">WhatsApp Marketing</h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Broadcast campaigns</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Customer follow-ups</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Offer promotions</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>List segmentation</span></li>
+            </ul>
+            
+          </div>
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="school-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">ERP Solutions</h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Student and staff data</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Fees and attendance</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Admin dashboards</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Reports and analytics</span></li>
+            </ul>
+            
+          </div>
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">Social Media</h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Content planning</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Design and posting</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Community growth</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Engagement strategy</span></li>
+            </ul>
+            
+          </div>
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="megaphone-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">Google Ads</h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Search campaigns</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Conversion tracking</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Keyword research</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Ad copy testing</span></li>
+            </ul>
+            
+          </div>
+          <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
+            <div class="service-head">
+              <span class="service-icon">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </span>
+              <h3 class="font-heading text-xl font-bold">
+                <ion-icon name="logo-apple" class="text-base text-slate-600"></ion-icon>
+                App Development
+              </h3>
+            </div>
+            <ul class="service-list mt-4 text-sm text-slate-600">
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Android and iOS</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>UI and UX design</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>API integration</span></li>
+              <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>App store setup</span></li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-16">
+        <div class="stats-band rounded-3xl border border-slate-200 bg-white px-6 py-10">
+          <div class="grid gap-8 md:grid-cols-4">
+            <div>
+              <p class="stat-number text-4xl font-bold text-ink md:text-5xl" data-target="96" data-suffix="%">0%</p>
+              <p class="mt-2 text-xs uppercase tracking-[0.3em] text-slate-500">Client retention</p>
+            </div>
+            <div>
+              <p class="stat-number text-4xl font-bold text-ink md:text-5xl" data-target="6" data-suffix="+">0+</p>
+              <p class="mt-2 text-xs uppercase tracking-[0.3em] text-slate-500">Years of service</p>
+            </div>
+            <div>
+              <p class="stat-number text-4xl font-bold text-ink md:text-5xl" data-target="20" data-suffix="+">0+</p>
+              <p class="mt-2 text-xs uppercase tracking-[0.3em] text-slate-500">Professionals</p>
+            </div>
+            <div>
+              <p class="stat-number text-4xl font-bold text-ink md:text-5xl" data-target="190" data-suffix="+">0+</p>
+              <p class="mt-2 text-xs uppercase tracking-[0.3em] text-slate-500">Satisfied clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12">
+        <div class="cta-simple flex flex-col items-start gap-4 border-t border-slate-200 pt-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Quick Connect</p>
+            <h3 class="mt-2 text-xl font-semibold text-ink md:text-2xl">Want a quick plan for your business</h3>
+            <p class="mt-2 text-sm text-slate-600">Chat on WhatsApp and get a quick action list.</p>
+          </div>
+          <a href="https://wa.me/919247817555" class="btn btn-primary">
+            <ion-icon name="logo-whatsapp" class="text-lg"></ion-icon>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonial-section text-white">
+      <div class="mx-auto max-w-6xl px-6 py-24">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-white/60">Testimonials</p>
+            <h2 class="section-title text-3xl md:text-5xl">Clients who stayed with us</h2>
+            <p class="mt-3 text-white/70">Real results from businesses in and around Vijayawada.</p>
+          </div>
+          <div class="rounded-full border border-white/20 px-5 py-2 text-xs uppercase tracking-[0.3em] text-white/60">Trusted by growing teams</div>
+        </div>
+        <div class="mt-12 overflow-hidden">
+          <div class="testimonial-marquee flex gap-8">
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">We saw a clear jump in enquiries within the first month and reports were simple.</p>
+              <p class="mt-6 text-sm text-white/60">Retail business owner</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Ad costs reduced and lead quality improved. Fast response on every change.</p>
+              <p class="mt-6 text-sm text-white/60">Education institute director</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">They rebuilt our website and conversions improved in just a few weeks.</p>
+              <p class="mt-6 text-sm text-white/60">Service brand founder</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Good quality leads with steady follow ups. Reporting is transparent.</p>
+              <p class="mt-6 text-sm text-white/60">Healthcare clinic owner</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Ads and website both improved. Enquiries are more consistent now.</p>
+              <p class="mt-6 text-sm text-white/60">Real estate promoter</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Smooth coordination, quick edits, and good ideas for our brand.</p>
+              <p class="mt-6 text-sm text-white/60">Retail chain manager</p>
+            </div>
+          </div>
+          <div class="testimonial-marquee testimonial-marquee-reverse flex gap-8">
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">New enquiries started quickly and weekly updates were easy to follow.</p>
+              <p class="mt-6 text-sm text-white/60">Retail business owner</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Costs went down and quality leads went up. Team is very responsive.</p>
+              <p class="mt-6 text-sm text-white/60">Education institute director</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Website revamp improved conversions and user experience.</p>
+              <p class="mt-6 text-sm text-white/60">Service brand founder</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Quality leads with proper follow ups. Reports are clean and clear.</p>
+              <p class="mt-6 text-sm text-white/60">Healthcare clinic owner</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Ads and site performance improved together. Enquiries are steady now.</p>
+              <p class="mt-6 text-sm text-white/60">Real estate promoter</p>
+            </div>
+            <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
+              <div class="mb-4 flex items-center gap-2 text-accent">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="text-white/80">Fast coordination and fresh ideas that helped our brand look better.</p>
+              <p class="mt-6 text-sm text-white/60">Retail chain manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="bg-white text-ink">
+      <div class="mx-auto max-w-6xl px-6 py-24">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-xl">
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Our Process</p>
+            <h2 class="section-title text-3xl md:text-5xl">Simple steps, real results</h2>
+            <p class="mt-3 text-slate-600">A clear, professional workflow that keeps projects on track.</p>
+          </div>
+          <a href="#contact" class="btn btn-secondary">Start Your Project</a>
+        </div>
+        <div class="process-stack-list mt-12">
+          <div class="process-card" style="--offset: 0; --z: 4;">
+            <div class="process-card-inner process-stack rounded-3xl border border-slate-200 bg-white">
+              <div class="process-left">
+                <div class="process-icon">
+                  <ion-icon name="search-outline"></ion-icon>
+                </div>
+                <p class="process-step">Step 01</p>
+              </div>
+              <div class="process-right">
+                <h3 class="font-heading text-2xl">Discover</h3>
+                <p class="mt-2 text-sm text-slate-600">We understand your goals, market, and audience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="process-card" style="--offset: 1; --z: 3;">
+            <div class="process-card-inner process-stack rounded-3xl border border-slate-200 bg-white">
+              <div class="process-left">
+                <div class="process-icon">
+                  <ion-icon name="map-outline"></ion-icon>
+                </div>
+                <p class="process-step">Step 02</p>
+              </div>
+              <div class="process-right">
+                <h3 class="font-heading text-2xl">Plan</h3>
+                <p class="mt-2 text-sm text-slate-600">We create the right strategy and timelines.</p>
+              </div>
+            </div>
+          </div>
+          <div class="process-card" style="--offset: 2; --z: 2;">
+            <div class="process-card-inner process-stack rounded-3xl border border-slate-200 bg-white">
+              <div class="process-left">
+                <div class="process-icon">
+                  <ion-icon name="rocket-outline"></ion-icon>
+                </div>
+                <p class="process-step">Step 03</p>
+              </div>
+              <div class="process-right">
+                <h3 class="font-heading text-2xl">Execute</h3>
+                <p class="mt-2 text-sm text-slate-600">We build, launch, and optimize your campaigns.</p>
+              </div>
+            </div>
+          </div>
+          <div class="process-card" style="--offset: 3; --z: 1;">
+            <div class="process-card-inner process-stack rounded-3xl border border-slate-200 bg-white">
+              <div class="process-left">
+                <div class="process-icon">
+                  <ion-icon name="trending-up-outline"></ion-icon>
+                </div>
+                <p class="process-step">Step 04</p>
+              </div>
+              <div class="process-right">
+                <h3 class="font-heading text-2xl">Scale</h3>
+                <p class="mt-2 text-sm text-slate-600">We improve performance and grow results.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="bg-white text-ink">
+      <div class="mx-auto max-w-6xl px-6 py-24">
+        <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div class="max-w-xl">
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">FAQs</p>
+            <h2 class="section-title text-3xl md:text-5xl">Questions we get often</h2>
+            <p class="mt-3 text-slate-600">Clear answers before we start your project.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <div class="faq-item rounded-3xl border border-slate-200 bg-white p-6">
+            <button type="button" class="faq-trigger">
+              <span>How soon can we start?</span>
+              <ion-icon name="add-outline" class="faq-icon"></ion-icon>
+            </button>
+            <div class="faq-panel">
+              <p class="text-sm text-slate-600">We can usually begin within 3 to 5 working days after the initial discussion.</p>
+            </div>
+          </div>
+          <div class="faq-item rounded-3xl border border-slate-200 bg-white p-6">
+            <button type="button" class="faq-trigger">
+              <span>Do you offer monthly marketing plans?</span>
+              <ion-icon name="add-outline" class="faq-icon"></ion-icon>
+            </button>
+            <div class="faq-panel">
+              <p class="text-sm text-slate-600">Yes, we provide flexible monthly retainers based on your goals and budget.</p>
+            </div>
+          </div>
+          <div class="faq-item rounded-3xl border border-slate-200 bg-white p-6">
+            <button type="button" class="faq-trigger">
+              <span>Will you manage ads and content together?</span>
+              <ion-icon name="add-outline" class="faq-icon"></ion-icon>
+            </button>
+            <div class="faq-panel">
+              <p class="text-sm text-slate-600">Yes, we align content and ads so messaging stays consistent across channels.</p>
+            </div>
+          </div>
+          <div class="faq-item rounded-3xl border border-slate-200 bg-white p-6">
+            <button type="button" class="faq-trigger">
+              <span>Can you redesign our existing website?</span>
+              <ion-icon name="add-outline" class="faq-icon"></ion-icon>
+            </button>
+            <div class="faq-panel">
+              <p class="text-sm text-slate-600">Absolutely. We can audit the current site and rebuild with modern UI and performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white text-ink">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="grid gap-12 md:grid-cols-2">
+          <div class="space-y-6">
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Contact</p>
+            <h2 class="section-title text-3xl md:text-5xl">Get in touch</h2>
+            <p class="text-slate-600">Reach us instantly for support, quotes, or quick guidance.</p>
+            <div class="rounded-3xl border border-slate-200 bg-white p-6">
+              <p class="text-sm text-slate-500">Contact options</p>
+              <div class="mt-4 flex flex-wrap items-center gap-4">
+                <a href="tel:+919247817555" class="contact-btn contact-btn-phone">
+                  <ion-icon name="call-outline" class="text-lg"></ion-icon>
+                  +91 9247817555
+                </a>
+                <a href="https://wa.me/919247817555" class="contact-btn contact-btn-whatsapp">
+                  <ion-icon name="logo-whatsapp" class="text-lg"></ion-icon>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d489597.8388720261!2d80.648415!3d16.52695!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff86526bfd3%3A0xda02e1707dff2bdc!2sJk%20soft!5e0!3m2!1sen!2sus!4v1770215481711!5m2!1sen!2sus" width="600" height="450" style="border:0; width:100%; height:320px; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-glow bg-slatebg text-white">
+      <div class="mx-auto max-w-6xl px-6 py-16">
+        <div class="grid gap-10 md:grid-cols-4">
+          <div class="footer-col">
+            <img src="images/logo.svg" alt="JK Soft logo" class="h-20 w-auto" />
+            <p class="mt-2 text-sm text-white/70">Digital marketing and software solutions for growing businesses. We help brands build visibility, generate leads, and scale online.</p>
+            <button type="button" class="btn btn-primary btn-small mt-6" data-quote-open>Request a Quote</button>
+          </div>
+          <div class="footer-col">
+            <p class="footer-label">Services</p>
+            <ul class="footer-services-list">
+              <li>Website Design & Development</li>
+              <li>Digital Marketing</li>
+              <li>Social Media Management</li>
+              <li>Google Ads</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-label">Services</p>
+            <ul class="footer-services-list">
+              <li>WhatsApp Marketing</li>
+              <li>ERP Solutions</li>
+              <li>App Development</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-label">Contact</p>
+            <div class="mt-4 space-y-2 text-sm text-white/70">
+              <a href="tel:+919247817555" class="block">Phone: +91 9247817555</a>
+              <p>Hours: Mon-Fri 9am to 6pm</p>
+              <a href="https://wa.me/919247817555" class="inline-flex items-center gap-2 text-white">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+                Chat with WhatsApp
+              </a>
+            </div>
+            <div class="pt-6">
+              <p class="footer-label">Social</p>
+              <div class="mt-3 flex items-center gap-4 text-white/70">
+                <a href="#" aria-label="Facebook" class="footer-icon">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#" aria-label="Instagram" class="footer-icon">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#" aria-label="LinkedIn" class="footer-icon">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#" aria-label="YouTube" class="footer-icon">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
+          <span>© 2026 JK Soft. All rights reserved.</span>
+          <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="hover:text-white">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="quoteModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" data-quote-close></div>
+      <div class="modal-card">
+        <button class="modal-close" type="button" data-quote-close aria-label="Close">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Request a Quote</p>
+        <h3 class="mt-3 text-2xl font-semibold text-ink">Tell us about your project</h3>
+        <form class="mt-6 grid gap-4">
+          <div>
+            <label class="text-sm text-slate-600">Name</label>
+            <input type="text" class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="text-sm text-slate-600">Phone</label>
+            <input type="tel" class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent" placeholder="+91" />
+          </div>
+          <div>
+            <label class="text-sm text-slate-600">Service Required</label>
+            <select class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent">
+              <option>Website Design & Development</option>
+              <option>Digital Marketing</option>
+              <option>E-Commerce</option>
+              <option>Bulk WhatsApp Message Sender</option>
+              <option>Accounting Software</option>
+              <option>E-School ERP Solutions</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm text-slate-600">Message</label>
+            <textarea rows="4" class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent" placeholder="Tell us your requirements"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full justify-center">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="stickyBar" class="sticky-bar fixed bottom-6 left-1/2 z-40 w-[92%] max-w-xl -translate-x-1/2 translate-y-10 rounded-full border border-slate-200 bg-white px-4 py-3 opacity-0 transition duration-500">
+    <div class="flex items-center justify-between text-sm">
+      <a href="tel:+919247817555" class="flex items-center gap-2 text-white/90">
+        <ion-icon name="call-outline" class="text-lg"></ion-icon>
+        <span class="hidden sm:inline">Phone</span>
+      </a>
+      <span class="h-6 w-px bg-white/20"></span>
+      <a href="#contact" class="flex items-center gap-2 text-white/90">
+        <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
+        <span class="hidden sm:inline">Enquire</span>
+      </a>
+      <span class="h-6 w-px bg-white/20"></span>
+      <a href="https://wa.me/919247817555" class="flex items-center gap-2 text-white/90">
+        <ion-icon name="logo-whatsapp" class="text-lg"></ion-icon>
+        <span class="hidden sm:inline">WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

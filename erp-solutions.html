@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERP Solutions | JK Soft</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0F172A",
+            slatebg: "#0B1220",
+            accent: "#F7941D",
+            secondary: "#207DE9"
+          },
+          fontFamily: {
+            heading: ["Inter", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-white text-ink">
+  <header id="siteHeader" class="site-header absolute top-0 left-0 w-full z-30 transition duration-300">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.svg" alt="JK Soft logo" class="h-20 w-auto" />
+      </a>
+      <nav class="hidden items-center gap-10 text-sm font-light text-white/80 md:flex">
+        <a href="index.html#home" class="uppercase tracking-[0.3em] hover:text-white">Home</a>
+        <div class="relative">
+          <button id="servicesToggle" type="button"
+            class="flex items-center gap-2 uppercase tracking-[0.3em] hover:text-white">
+            Services
+            <ion-icon name="chevron-down-outline" class="text-sm"></ion-icon>
+          </button>
+          <div id="servicesMenu"
+            class="mega-menu hidden absolute left-1/2 top-full mt-6 w-[520px] -translate-x-1/2 rounded-3xl border border-white/10 bg-slatebg/95 p-6 shadow-xl backdrop-blur">
+            <p class="text-xs tracking-[0.2em] text-white/60">Choose a service</p>
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm text-white/80">
+              <a href="website-design-development.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="color-palette-outline" class="text-lg text-accent"></ion-icon>
+                Website Design & Development
+              </a>
+              <a href="digital-marketing.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="trending-up-outline" class="text-lg text-accent"></ion-icon>
+                Digital Marketing
+              </a>
+              <a href="social-media-management.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="people-outline" class="text-lg text-accent"></ion-icon>
+                Social Media Management
+              </a>
+              <a href="google-ads.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="megaphone-outline" class="text-lg text-accent"></ion-icon>
+                Google Ads
+              </a>
+              <a href="whatsapp-marketing.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="chatbubble-ellipses-outline" class="text-lg text-accent"></ion-icon>
+                WhatsApp Marketing
+              </a>
+              <a href="erp-solutions.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="layers-outline" class="text-lg text-accent"></ion-icon>
+                ERP Solutions
+              </a>
+              <a href="app-development.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="phone-portrait-outline" class="text-lg text-accent"></ion-icon>
+                App Development
+              </a>
+              <a href="seo.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="search-outline" class="text-lg text-accent"></ion-icon>
+                SEO
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="reviews.html" class="uppercase tracking-[0.3em] hover:text-white">Reviews</a>
+        <a href="contact.html" class="uppercase tracking-[0.3em] hover:text-white">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="tel:+919247817555" class="hidden btn btn-secondary btn-small md:inline-flex">
+          <ion-icon name="call-outline" class="text-lg"></ion-icon>
+          +91 9247817555
+        </a>
+        <a href="https://wa.me/919247817555" class="whatsapp-pill md:inline-flex" aria-label="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+        <button id="mobileMenu" class="mobile-menu-btn md:hidden" aria-label="Open menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="mobile-nav hidden">
+      <div class="mx-auto max-w-6xl px-6 py-6">
+        <div class="flex flex-col gap-4 text-base font-semibold text-white">
+          <a href="index.html#home" class="mobile-link">Home</a>
+          <button type="button" class="mobile-link mobile-services-toggle" data-mobile-services>
+            Services
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+          <div class="mobile-services hidden">
+            <a href="website-design-development.html"><ion-icon name="color-palette-outline"></ion-icon>Website Design &
+              Development</a>
+            <a href="digital-marketing.html"><ion-icon name="trending-up-outline"></ion-icon>Digital Marketing</a>
+            <a href="social-media-management.html"><ion-icon name="people-outline"></ion-icon>Social Media
+              Management</a>
+            <a href="google-ads.html"><ion-icon name="megaphone-outline"></ion-icon>Google Ads</a>
+            <a href="whatsapp-marketing.html"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>WhatsApp
+              Marketing</a>
+            <a href="erp-solutions.html"><ion-icon name="layers-outline"></ion-icon>ERP Solutions</a>
+            <a href="app-development.html"><ion-icon name="phone-portrait-outline"></ion-icon>App Development</a>
+            <a href="seo.html"><ion-icon name="search-outline"></ion-icon>SEO</a>
+          </div>
+          <a href="reviews.html" class="mobile-link">Reviews</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+        <div class="mt-6 flex gap-3">
+          <a href="tel:+919247817555" class="mobile-action">
+            <ion-icon name="call-outline"></ion-icon>
+            Call
+          </a>
+          <a href="https://wa.me/919247817555" class="mobile-action mobile-action-wa">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-hero hero-animated relative overflow-hidden">
+      <canvas id="heroCanvas"></canvas>
+      <div class="service-hero-icons" aria-hidden="true">
+        <ion-icon name="logo-html5"></ion-icon>
+        <ion-icon name="logo-css3"></ion-icon>
+        <ion-icon name="logo-javascript"></ion-icon>
+        <ion-icon name="logo-react"></ion-icon>
+        <ion-icon name="logo-wordpress"></ion-icon>
+        <ion-icon name="logo-google"></ion-icon>
+      </div>
+      <div
+        class="service-hero-content mx-auto flex min-h-[50vh] max-w-6xl flex-col items-center gap-10 px-6 py-12 pt-20">
+        <div class="max-w-4xl text-white mx-auto text-center">
+
+          <h1 class="mt-12 text-4xl font-extrabold leading-tight md:text-6xl">
+            <span class="block">ERP solutions that streamline operations</span>
+          </h1>
+          <p class="mt-5 text-lg text-white/70">
+            Custom ERP implementation tailored to your workflows.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-white/70">
+            <a href="tel:+919247817555" class="hero-contact-chip">
+              <ion-icon name="call-outline"></ion-icon>
+              +91 9247817555
+            </a>
+            <a href="https://wa.me/919247817555" class="hero-contact-chip hero-contact-chip-wa">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              WhatsApp Chat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white what-you-get-section">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">What You Get</p>
+          <h2 class="section-title mt-4 text-3xl md:text-5xl">A complete ERP foundation for growth</h2>
+          <p class="mt-4 text-slate-600">From planning to rollout, we handle it end-to-end.</p>
+        </div>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="service-feature-card">
+            <span class="service-feature-icon">
+              <ion-icon name="git-network-outline"></ion-icon>
+            </span>
+            <p>Workflow mapping</p>
+          </div>
+          <div class="service-feature-card">
+            <span class="service-feature-icon">
+              <ion-icon name="construct-outline"></ion-icon>
+            </span>
+            <p>Module customization</p>
+          </div>
+          <div class="service-feature-card">
+            <span class="service-feature-icon">
+              <ion-icon name="cloud-upload-outline"></ion-icon>
+            </span>
+            <p>Data migration</p>
+          </div>
+          <div class="service-feature-card">
+            <span class="service-feature-icon">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </span>
+            <p>Role-based access</p>
+          </div>
+          <div class="service-feature-card">
+            <span class="service-feature-icon">
+              <ion-icon name="school-outline"></ion-icon>
+            </span>
+            <p>Training and onboarding</p>
+          </div>
+          <div class="service-feature-card">
+            <span class="service-feature-icon">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+            </span>
+            <p>Support and maintenance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-xl">
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Process</p>
+            <h2 class="section-title mt-4 text-3xl md:text-5xl">A clear, professional workflow</h2>
+          </div>
+          <button type="button" class="btn btn-secondary btn-small" data-quote-open>Start a Project</button>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-4">
+          <div class="process-mini">
+            <p class="process-step">Step 01</p>
+            <h3>Discovery</h3>
+            <p>Current workflows.</p>
+          </div>
+          <div class="process-mini">
+            <p class="process-step">Step 02</p>
+            <h3>Configure</h3>
+            <p>Modules and data.</p>
+          </div>
+          <div class="process-mini">
+            <p class="process-step">Step 03</p>
+            <h3>Implement</h3>
+            <p>Testing and training.</p>
+          </div>
+          <div class="process-mini">
+            <p class="process-step">Step 04</p>
+            <h3>Launch</h3>
+            <p>Go-live and support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slatebg cta-grid-bg">
+      <div class="mx-auto max-w-6xl px-6 py-20 text-white">
+        <div class="cta-panel">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-white/60">Ready to Start?</p>
+            <h2 class="section-title mt-4 text-3xl md:text-5xl">Build an ERP system that scales</h2>
+            <p class="mt-4 text-white/70">Speak with our team and get a clear implementation roadmap.</p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-4 md:mt-0">
+            <button type="button" class="btn btn-primary" data-quote-open>Request a Quote</button>
+            <a href="https://wa.me/919247817555" class="btn btn-secondary">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="grid gap-10 md:grid-cols-2">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Why JK Soft</p>
+            <h2 class="section-title mt-4 text-3xl md:text-5xl">Local expertise with modern execution</h2>
+            <p class="mt-4 text-slate-600">We combine strategy, design, and technology to deliver measurable outcomes.
+            </p>
+          </div>
+          <div class="grid gap-4">
+            <div class="value-card">Fast turnaround with clear milestones</div>
+            <div class="value-card">Dedicated account manager</div>
+            <div class="value-card">Transparent communication and reporting</div>
+            <div class="value-card">Post launch maintenance options</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="client-proof-wrap">
+          <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-white/60">Client Proof</p>
+              <h2 class="section-title mt-4 text-3xl text-white md:text-5xl">Brands that trust our work</h2>
+              <p class="mt-4 text-white/70">Trusted by growing teams and founders across industries.</p>
+            </div>
+          </div>
+          <div class="mt-10 client-logo-grid client-logo-grid-dark">
+            <img src="clients/alaska-plastic-surgery.png.webp" alt="Alaska Plastic Surgery" />
+            <img src="clients/Beachside-recovery.png.webp" alt="Beachside Recovery" />
+            <img src="clients/harmony-healing.png.webp" alt="Harmony Healing" />
+            <img src="clients/emrald-hills.png.webp" alt="Emerald Hills" />
+            <img src="clients/great-oaks.png.webp" alt="Great Oaks" />
+            <img src="clients/magnolia.png.webp" alt="Magnolia" />
+            <img src="clients/south-beach-detox.png.webp" alt="South Beach Detox" />
+            <img src="clients/we-level-up.png.webp" alt="We Level Up" />
+            <img src="clients/alchemist-pharma.png.webp" alt="Alchemist Pharma" />
+            <img src="clients/bedrock-recovery-center.png.webp" alt="Bedrock Recovery Center" />
+            <img src="clients/harmony-recovery-group.png.webp" alt="Harmony Recovery Group" />
+            <img src="clients/Will-Shlifer-Logo.png.webp" alt="Will Shlifer Logo" />
+          </div>
+          <div class="mt-12 testimonial-marquee testimonial-marquee-dark">
+            <div class="testimonial-track">
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Our new website helped us double enquiry volume within weeks.”</p>
+                <span>Retail business owner</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Clean design, fast delivery, and clear communication.”</p>
+                <span>Healthcare clinic founder</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Lead quality improved and follow-ups became much easier.”</p>
+                <span>Services brand founder</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“The site feels premium and performs very well on mobile.”</p>
+                <span>Education business owner</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Great strategy support and on-time launch.”</p>
+                <span>Real estate team</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“We saw better conversions within the first month.”</p>
+                <span>D2C brand manager</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Our new website helped us double enquiry volume within weeks.”</p>
+                <span>Retail business owner</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Clean design, fast delivery, and clear communication.”</p>
+                <span>Healthcare clinic founder</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Lead quality improved and follow-ups became much easier.”</p>
+                <span>Services brand founder</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“The site feels premium and performs very well on mobile.”</p>
+                <span>Education business owner</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“Great strategy support and on-time launch.”</p>
+                <span>Real estate team</span>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-meta">
+                  <div class="testimonial-stars">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon
+                      name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                  <ion-icon name="logo-google" class="testimonial-badge"></ion-icon>
+                </div>
+                <p>“We saw better conversions within the first month.”</p>
+                <span>D2C brand manager</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-xl">
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Deliverables</p>
+            <h2 class="section-title mt-4 text-3xl md:text-5xl">Everything included in your package</h2>
+          </div>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-4">
+          <div class="deliverable"><ion-icon name="people-outline"></ion-icon>Requirements workshop</div>
+          <div class="deliverable"><ion-icon name="document-text-outline"></ion-icon>Process documentation</div>
+          <div class="deliverable"><ion-icon name="settings-outline"></ion-icon>ERP configuration</div>
+          <div class="deliverable"><ion-icon name="construct-outline"></ion-icon>Custom modules</div>
+          <div class="deliverable"><ion-icon name="cloud-upload-outline"></ion-icon>Data migration</div>
+          <div class="deliverable"><ion-icon name="lock-closed-outline"></ion-icon>User roles and permissions</div>
+          <div class="deliverable"><ion-icon name="build-outline"></ion-icon>QA and testing</div>
+          <div class="deliverable"><ion-icon name="school-outline"></ion-icon>Training sessions</div>
+          <div class="deliverable"><ion-icon name="rocket-outline"></ion-icon>Go-live plan</div>
+          <div class="deliverable"><ion-icon name="call-outline"></ion-icon>Post-launch support</div>
+          <div class="deliverable"><ion-icon name="stats-chart-outline"></ion-icon>Reporting dashboards</div>
+          <div class="deliverable"><ion-icon name="link-outline"></ion-icon>Integration setup</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-glow bg-slatebg text-white">
+    <div class="mx-auto max-w-6xl px-6 py-16">
+      <div class="grid gap-10 md:grid-cols-4">
+        <div class="footer-col">
+          <img src="images/logo.svg" alt="JK Soft logo" class="h-20 w-auto" />
+          <p class="mt-5 text-sm text-white/70">Digital marketing and software solutions for growing businesses. We help
+            brands build visibility, generate leads, and scale online.</p>
+          <button type="button" class="btn btn-primary btn-small mt-6" data-quote-open>Request a Quote</button>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Services</p>
+          <ul class="footer-services-list">
+            <li>Website Design & Development</li>
+            <li>Digital Marketing</li>
+            <li>Social Media Management</li>
+            <li>Google Ads</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Services</p>
+          <ul class="footer-services-list">
+            <li>WhatsApp Marketing</li>
+            <li>ERP Solutions</li>
+            <li>App Development</li>
+            <li>SEO</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Contact</p>
+          <div class="mt-4 space-y-2 text-sm text-white/70">
+            <a href="tel:+919247817555" class="block">Phone: +91 9247817555</a>
+            <p>Hours: Mon-Fri 9am to 6pm</p>
+            <a href="https://wa.me/919247817555" class="inline-flex items-center gap-2 text-white">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              Chat with WhatsApp
+            </a>
+          </div>
+          <div class="pt-6">
+            <p class="footer-label">Social</p>
+            <div class="mt-3 flex items-center gap-4 text-white/70">
+              <a href="#" aria-label="Facebook" class="footer-icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" aria-label="Instagram" class="footer-icon">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="footer-icon">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+              <a href="#" aria-label="YouTube" class="footer-icon">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
+        <span>© 2026 JK Soft. All rights reserved.</span>
+        <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="hover:text-white">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="quoteModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-quote-close></div>
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-quote-close aria-label="Close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Request a Quote</p>
+      <h3 class="mt-3 text-2xl font-semibold text-ink">Tell us about your project</h3>
+      <form class="mt-6 grid gap-4" action="send-email.php" method="post">
+        <input type="hidden" name="form_type" value="Request a Quote">
+        <div>
+          <label class="text-sm text-slate-600">Name</label>
+          <input type="text" name="name"
+            class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent"
+            placeholder="Your name" required />
+        </div>
+        <div>
+          <label class="text-sm text-slate-600">Phone</label>
+          <input type="tel" name="phone"
+            class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent"
+            placeholder="+91" required />
+        </div>
+        <div>
+          <label class="text-sm text-slate-600">Service Required</label>
+          <select name="service"
+            class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent">
+            <option>Website Design & Development</option>
+            <option>Digital Marketing</option>
+            <option>E-Commerce</option>
+            <option>WhatsApp Marketing</option>
+            <option>ERP Solutions</option>
+            <option>Social Media</option>
+            <option>Google Ads</option>
+            <option>App Development</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm text-slate-600">Message</label>
+          <textarea rows="4" name="message"
+            class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent"
+            placeholder="Tell us your requirements"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-full justify-center">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

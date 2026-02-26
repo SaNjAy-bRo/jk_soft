@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | JK Soft</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0F172A",
+            slatebg: "#0B1220",
+            accent: "#F7941D",
+            secondary: "#207DE9"
+          },
+          fontFamily: {
+            heading: ["Inter", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slatebg text-white">
+  <main class="min-h-screen">
+    <section class="hero-animated relative overflow-hidden">
+      <canvas id="heroCanvas"></canvas>
+      <div class="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-6 text-center">
+        <span class="pill-label inline-flex w-fit items-center">Thank You</span>
+        <h1 class="mt-6 text-4xl font-extrabold md:text-5xl">We’ve received your request</h1>
+        <p class="mt-4 text-white/70">Our team will reach out shortly. If you need immediate help, call us or chat on WhatsApp.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-4">
+          <a href="tel:+919247817555" class="btn btn-secondary">
+            <ion-icon name="call-outline" class="text-lg"></ion-icon>
+            Call Now
+          </a>
+          <a href="https://wa.me/919247817555" class="btn btn-primary">
+            <ion-icon name="logo-whatsapp" class="text-lg"></ion-icon>
+            WhatsApp Us
+          </a>
+        </div>
+        <a href="index.html" class="mt-8 text-sm text-white/70 hover:text-white">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
