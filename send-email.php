@@ -11,28 +11,26 @@ $service = trim($_POST['service'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $formType = trim($_POST['form_type'] ?? 'Website Form');
 
-$safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-$safePhone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
-$safeService = htmlspecialchars($service, ENT_QUOTES, 'UTF-8');
-$safeMessage = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
-
+// 1. Build the email subject and body
 $subject = "JK Soft Enquiry: " . ($formType ?: 'Website Form');
-$body = "New enquiry received.\n\n";
+$body = "New enquiry received on " . date('Y-m-d H:i:s') . "\n\n";
 $body .= "Form: " . ($formType ?: 'Website Form') . "\n";
-$body .= "Name: " . $safeName . "\n";
-$body .= "Phone: " . $safePhone . "\n";
-if ($safeService !== '') {
-  $body .= "Service: " . $safeService . "\n";
+$body .= "Name: " . $name . "\n";
+$body .= "Phone: " . $phone . "\n";
+if ($service !== '') {
+  $body .= "Service: " . $service . "\n";
 }
-if ($safeMessage !== '') {
-  $body .= "Message: " . $safeMessage . "\n";
+if ($message !== '') {
+  $body .= "Message: " . $message . "\n";
 }
 
+// 2. Prepare headers
 $headers = [];
 $headers[] = 'From: JK Soft Website <no-reply@jksoft.co.in>';
-$headers[] = 'Reply-To: ' . ($safeName ? $safeName . ' <info@jksoft.co.in>' : 'info@jksoft.co.in');
+$headers[] = 'Reply-To: ' . ($name ? $name . ' <' . $to . '>' : $to);
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 
+// 3. Send Email
 @mail($to, $subject, $body, implode("\r\n", $headers));
 
 header('Location: thankyou.html');

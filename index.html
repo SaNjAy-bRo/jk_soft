@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,149 +47,155 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="bg-slatebg text-white">
- 
+
 
   <header id="siteHeader" class="site-header absolute top-0 left-0 w-full z-30 transition duration-300">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-    <!-- Logo -->
-    <a href="#home" class="flex items-center gap-3">
-      <img src="images/logo.svg" alt="JK Soft logo" class="h-20 w-auto" />
-    </a>
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3">
+        <img src="images/jk-logo-light.png" alt="JK Soft logo" class="h-14 w-auto" />
+      </a>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden items-center gap-10 text-sm font-light text-white/80 md:flex">
-      <a href="#home" class="uppercase tracking-[0.3em] hover:text-white">Home</a>
+      <!-- Desktop Navigation -->
+      <nav class="hidden items-center gap-10 text-sm font-light text-white/80 md:flex">
+        <a href="#home" class="uppercase tracking-[0.3em] hover:text-white">Home</a>
 
-      <!-- Services Mega Menu -->
-      <div class="relative">
-        <button id="servicesToggle" type="button" class="flex items-center gap-2 uppercase tracking-[0.3em] hover:text-white">
-          Services
-          <ion-icon name="chevron-down-outline" class="text-sm"></ion-icon>
-        </button>
+        <!-- Services Mega Menu -->
+        <div class="relative">
+          <button id="servicesToggle" type="button"
+            class="flex items-center gap-2 uppercase tracking-[0.3em] hover:text-white">
+            Services
+            <ion-icon name="chevron-down-outline" class="text-sm"></ion-icon>
+          </button>
 
-        <div id="servicesMenu"
-          class="mega-menu hidden absolute left-1/2 top-full mt-6 w-[520px] -translate-x-1/2 rounded-3xl border border-white/10 bg-slatebg/95 p-6 shadow-xl backdrop-blur">
-          <p class="text-xs tracking-[0.2em] text-white/60">Choose a service</p>
+          <div id="servicesMenu"
+            class="mega-menu hidden absolute left-1/2 top-full mt-6 w-[520px] -translate-x-1/2 rounded-3xl border border-white/10 bg-slatebg/95 p-6 shadow-xl backdrop-blur">
+            <p class="text-xs tracking-[0.2em] text-white/60">Choose a service</p>
 
-          <div class="mt-4 grid grid-cols-2 gap-4 text-sm text-white/80">
-            <a href="website-design-development.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="color-palette-outline" class="text-lg text-accent"></ion-icon>
-              Website Design & Development
-            </a>
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm text-white/80">
+              <a href="website-design-development.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="color-palette-outline" class="text-lg text-accent"></ion-icon>
+                Website Design & Development
+              </a>
 
-            <a href="digital-marketing.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="trending-up-outline" class="text-lg text-accent"></ion-icon>
-              Digital Marketing
-            </a>
+              <a href="digital-marketing.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="trending-up-outline" class="text-lg text-accent"></ion-icon>
+                Digital Marketing
+              </a>
 
-            <a href="social-media-management.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="people-outline" class="text-lg text-accent"></ion-icon>
-              Social Media Management
-            </a>
+              <a href="social-media-management.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="people-outline" class="text-lg text-accent"></ion-icon>
+                Social Media Management
+              </a>
 
-            <a href="google-ads.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="megaphone-outline" class="text-lg text-accent"></ion-icon>
-              Google Ads
-            </a>
+              <a href="google-ads.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="megaphone-outline" class="text-lg text-accent"></ion-icon>
+                Google Ads
+              </a>
 
-            <a href="whatsapp-marketing.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="chatbubble-ellipses-outline" class="text-lg text-accent"></ion-icon>
-              WhatsApp Marketing
-            </a>
+              <a href="whatsapp-marketing.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="chatbubble-ellipses-outline" class="text-lg text-accent"></ion-icon>
+                WhatsApp Marketing
+              </a>
 
-            <a href="erp-solutions.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="layers-outline" class="text-lg text-accent"></ion-icon>
-              ERP Solutions
-            </a>
+              <a href="erp-solutions.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="layers-outline" class="text-lg text-accent"></ion-icon>
+                ERP Solutions
+              </a>
 
-            <a href="app-development.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="phone-portrait-outline" class="text-lg text-accent"></ion-icon>
-              App Development
-            </a>
+              <a href="app-development.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="phone-portrait-outline" class="text-lg text-accent"></ion-icon>
+                App Development
+              </a>
 
-            <!-- SEO ADDED -->
-            <a href="seo.html"
-              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
-              <ion-icon name="search-outline" class="text-lg text-accent"></ion-icon>
-              SEO
-            </a>
+              <!-- SEO ADDED -->
+              <a href="seo.html"
+                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-white/20">
+                <ion-icon name="search-outline" class="text-lg text-accent"></ion-icon>
+                SEO
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <a href="reviews.html" class="uppercase tracking-[0.3em] hover:text-white">Reviews</a>
-      <a href="contact.html" class="uppercase tracking-[0.3em] hover:text-white">Contact</a>
-    </nav>
+        <a href="reviews.html" class="uppercase tracking-[0.3em] hover:text-white">Reviews</a>
+        <a href="contact.html" class="uppercase tracking-[0.3em] hover:text-white">Contact</a>
+      </nav>
 
-    <!-- Right Actions -->
-    <div class="flex items-center gap-3">
-      <a href="tel:+919247817555" class="hidden btn btn-secondary btn-small md:inline-flex">
-        <ion-icon name="call-outline" class="text-lg"></ion-icon>
-        +91 9247817555
-      </a>
-      <a href="https://wa.me/919247817555" class="whatsapp-pill md:inline-flex" aria-label="WhatsApp">
-        <ion-icon name="logo-whatsapp"></ion-icon>
-      </a>
-      <button id="mobileMenu" class="mobile-menu-btn md:hidden" aria-label="Open menu">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Navigation -->
-  <div id="mobileNav" class="mobile-nav hidden">
-    <div class="mx-auto max-w-6xl px-6 py-6">
-      <div class="flex flex-col gap-4 text-base font-semibold text-white">
-        <a href="#home" class="mobile-link">Home</a>
-
-        <button type="button" class="mobile-link mobile-services-toggle" data-mobile-services>
-          Services
-          <ion-icon name="chevron-down-outline"></ion-icon>
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3">
+        <a href="tel:+917569257998" class="hidden btn btn-secondary btn-small md:inline-flex">
+          <ion-icon name="call-outline" class="text-lg"></ion-icon>
+          +91 7569257998
+        </a>
+        <a href="https://wa.me/917569257998" class="whatsapp-pill md:inline-flex" aria-label="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+        <button id="mobileMenu" class="mobile-menu-btn md:hidden" aria-label="Open menu">
+          <ion-icon name="menu-outline"></ion-icon>
         </button>
+      </div>
+    </div>
 
-        <div class="mobile-services hidden">
-          <a href="website-design-development.html"><ion-icon name="color-palette-outline"></ion-icon>Website Design & Development</a>
-          <a href="digital-marketing.html"><ion-icon name="trending-up-outline"></ion-icon>Digital Marketing</a>
-          <a href="social-media-management.html"><ion-icon name="people-outline"></ion-icon>Social Media Management</a>
-          <a href="google-ads.html"><ion-icon name="megaphone-outline"></ion-icon>Google Ads</a>
-          <a href="whatsapp-marketing.html"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>WhatsApp Marketing</a>
-          <a href="erp-solutions.html"><ion-icon name="layers-outline"></ion-icon>ERP Solutions</a>
-          <a href="app-development.html"><ion-icon name="phone-portrait-outline"></ion-icon>App Development</a>
-          <!-- SEO ADDED -->
-          <a href="seo.html"><ion-icon name="search-outline"></ion-icon>SEO</a>
+    <!-- Mobile Navigation -->
+    <div id="mobileNav" class="mobile-nav hidden">
+      <div class="mx-auto max-w-6xl px-6 py-6">
+        <div class="flex flex-col gap-4 text-base font-semibold text-white">
+          <a href="#home" class="mobile-link">Home</a>
+
+          <button type="button" class="mobile-link mobile-services-toggle" data-mobile-services>
+            Services
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+
+          <div class="mobile-services hidden">
+            <a href="website-design-development.html"><ion-icon name="color-palette-outline"></ion-icon>Website Design &
+              Development</a>
+            <a href="digital-marketing.html"><ion-icon name="trending-up-outline"></ion-icon>Digital Marketing</a>
+            <a href="social-media-management.html"><ion-icon name="people-outline"></ion-icon>Social Media
+              Management</a>
+            <a href="google-ads.html"><ion-icon name="megaphone-outline"></ion-icon>Google Ads</a>
+            <a href="whatsapp-marketing.html"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>WhatsApp
+              Marketing</a>
+            <a href="erp-solutions.html"><ion-icon name="layers-outline"></ion-icon>ERP Solutions</a>
+            <a href="app-development.html"><ion-icon name="phone-portrait-outline"></ion-icon>App Development</a>
+            <!-- SEO ADDED -->
+            <a href="seo.html"><ion-icon name="search-outline"></ion-icon>SEO</a>
+          </div>
+
+          <a href="reviews.html" class="mobile-link">Reviews</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
         </div>
 
-        <a href="reviews.html" class="mobile-link">Reviews</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
-      </div>
-
-      <div class="mt-6 flex gap-3">
-        <a href="tel:+919247817555" class="mobile-action">
-          <ion-icon name="call-outline"></ion-icon>
-          Call
-        </a>
-        <a href="https://wa.me/919247817555" class="mobile-action mobile-action-wa">
-          <ion-icon name="logo-whatsapp"></ion-icon>
-          WhatsApp
-        </a>
+        <div class="mt-6 flex gap-3">
+          <a href="tel:+917569257998" class="mobile-action">
+            <ion-icon name="call-outline"></ion-icon>
+            Call
+          </a>
+          <a href="https://wa.me/917569257998" class="mobile-action mobile-action-wa">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            WhatsApp
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
 
   <main>
     <section id="home" class="hero-animated relative min-h-screen overflow-hidden">
       <canvas id="heroCanvas"></canvas>
-      <div class="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-28 md:grid md:grid-cols-[minmax(0,1fr)_380px] md:items-center md:gap-16">
+      <div
+        class="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-28 md:grid md:grid-cols-[minmax(0,1fr)_380px] md:items-center md:gap-16">
         <div class="max-w-none">
           <span class="pill-label inline-flex w-fit items-center">Full-Service Digital Agency</span>
           <h1 class="mt-6 font-heading text-4xl leading-tight text-white md:text-6xl">
@@ -236,9 +243,14 @@
         <div class="flex justify-center md:justify-end md:pt-10 mt-8 md:mt-0">
           <div class="hero-glass-card w-full max-w-[380px]">
             <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-white">Request a call back</h2>
-            <form class="mt-5 grid gap-5">
-              <input type="text" class="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none focus:border-white/40" placeholder="Your name" />
-              <input type="tel" class="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none focus:border-white/40" placeholder="Phone number" />
+            <form class="mt-5 grid gap-5" action="send-email.php" method="post">
+              <input type="hidden" name="form_type" value="Hero Callback Form">
+              <input type="text" name="name"
+                class="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none focus:border-white/40"
+                placeholder="Your name" required />
+              <input type="tel" name="phone"
+                class="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none focus:border-white/40"
+                placeholder="Phone number" required />
               <button type="submit" class="hero-cta-outline hero-cta-outline-blue w-full justify-center">
                 Submit
               </button>
@@ -281,7 +293,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Fast load performance</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>SEO-ready setup</span></li>
             </ul>
-            
+
           </div>
           <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
             <div class="service-head">
@@ -297,7 +309,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Conversion tracking</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Monthly reports</span></li>
             </ul>
-            
+
           </div>
           <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
             <div class="service-head">
@@ -313,7 +325,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Order tracking</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Conversion improvements</span></li>
             </ul>
-            
+
           </div>
           <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
             <div class="service-head">
@@ -328,7 +340,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Offer promotions</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>List segmentation</span></li>
             </ul>
-            
+
           </div>
           <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
             <div class="service-head">
@@ -343,7 +355,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Admin dashboards</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Reports and analytics</span></li>
             </ul>
-            
+
           </div>
           <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
             <div class="service-head">
@@ -358,7 +370,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Community growth</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Engagement strategy</span></li>
             </ul>
-            
+
           </div>
           <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
             <div class="service-head">
@@ -373,7 +385,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Keyword research</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>Ad copy testing</span></li>
             </ul>
-            
+
           </div>
           <div class="service-card rounded-3xl border border-slate-200 bg-white p-6">
             <div class="service-head">
@@ -391,7 +403,7 @@
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>API integration</span></li>
               <li><ion-icon name="checkmark-circle-outline"></ion-icon><span>App store setup</span></li>
             </ul>
-            
+
           </div>
         </div>
       </div>
@@ -424,13 +436,14 @@
 
     <section class="bg-white">
       <div class="mx-auto max-w-6xl px-6 py-12">
-        <div class="cta-simple flex flex-col items-start gap-4 border-t border-slate-200 pt-8 md:flex-row md:items-center md:justify-between">
+        <div
+          class="cta-simple flex flex-col items-start gap-4 border-t border-slate-200 pt-8 md:flex-row md:items-center md:justify-between">
           <div>
             <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Quick Connect</p>
             <h3 class="mt-2 text-xl font-semibold text-ink md:text-2xl">Want a quick plan for your business</h3>
             <p class="mt-2 text-sm text-slate-600">Chat on WhatsApp and get a quick action list.</p>
           </div>
-          <a href="https://wa.me/919247817555" class="btn btn-primary">
+          <a href="https://wa.me/917569257998" class="btn btn-primary">
             <ion-icon name="logo-whatsapp" class="text-lg"></ion-icon>
             WhatsApp Us
           </a>
@@ -446,7 +459,8 @@
             <h2 class="section-title text-3xl md:text-5xl">Clients who stayed with us</h2>
             <p class="mt-3 text-white/70">Real results from businesses in and around Vijayawada.</p>
           </div>
-          <div class="rounded-full border border-white/20 px-5 py-2 text-xs uppercase tracking-[0.3em] text-white/60">Trusted by growing teams</div>
+          <div class="rounded-full border border-white/20 px-5 py-2 text-xs uppercase tracking-[0.3em] text-white/60">
+            Trusted by growing teams</div>
         </div>
         <div class="mt-12 overflow-hidden">
           <div class="testimonial-marquee flex gap-8">
@@ -458,7 +472,8 @@
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
               </div>
-              <p class="text-white/80">We saw a clear jump in enquiries within the first month and reports were simple.</p>
+              <p class="text-white/80">We saw a clear jump in enquiries within the first month and reports were simple.
+              </p>
               <p class="mt-6 text-sm text-white/60">Retail business owner</p>
             </div>
             <div class="testimonial-card rounded-3xl border border-white/10 bg-white/5 p-8">
@@ -676,7 +691,8 @@
               <ion-icon name="add-outline" class="faq-icon"></ion-icon>
             </button>
             <div class="faq-panel">
-              <p class="text-sm text-slate-600">We can usually begin within 3 to 5 working days after the initial discussion.</p>
+              <p class="text-sm text-slate-600">We can usually begin within 3 to 5 working days after the initial
+                discussion.</p>
             </div>
           </div>
           <div class="faq-item rounded-3xl border border-slate-200 bg-white p-6">
@@ -685,7 +701,8 @@
               <ion-icon name="add-outline" class="faq-icon"></ion-icon>
             </button>
             <div class="faq-panel">
-              <p class="text-sm text-slate-600">Yes, we provide flexible monthly retainers based on your goals and budget.</p>
+              <p class="text-sm text-slate-600">Yes, we provide flexible monthly retainers based on your goals and
+                budget.</p>
             </div>
           </div>
           <div class="faq-item rounded-3xl border border-slate-200 bg-white p-6">
@@ -694,7 +711,8 @@
               <ion-icon name="add-outline" class="faq-icon"></ion-icon>
             </button>
             <div class="faq-panel">
-              <p class="text-sm text-slate-600">Yes, we align content and ads so messaging stays consistent across channels.</p>
+              <p class="text-sm text-slate-600">Yes, we align content and ads so messaging stays consistent across
+                channels.</p>
             </div>
           </div>
           <div class="faq-item rounded-3xl border border-slate-200 bg-white p-6">
@@ -703,7 +721,8 @@
               <ion-icon name="add-outline" class="faq-icon"></ion-icon>
             </button>
             <div class="faq-panel">
-              <p class="text-sm text-slate-600">Absolutely. We can audit the current site and rebuild with modern UI and performance.</p>
+              <p class="text-sm text-slate-600">Absolutely. We can audit the current site and rebuild with modern UI and
+                performance.</p>
             </div>
           </div>
         </div>
@@ -720,11 +739,11 @@
             <div class="rounded-3xl border border-slate-200 bg-white p-6">
               <p class="text-sm text-slate-500">Contact options</p>
               <div class="mt-4 flex flex-wrap items-center gap-4">
-                <a href="tel:+919247817555" class="contact-btn contact-btn-phone">
+                <a href="tel:+917569257998" class="contact-btn contact-btn-phone">
                   <ion-icon name="call-outline" class="text-lg"></ion-icon>
-                  +91 9247817555
+                  +91 7569257998
                 </a>
-                <a href="https://wa.me/919247817555" class="contact-btn contact-btn-whatsapp">
+                <a href="https://wa.me/917569257998" class="contact-btn contact-btn-whatsapp">
                   <ion-icon name="logo-whatsapp" class="text-lg"></ion-icon>
                   WhatsApp
                 </a>
@@ -732,7 +751,10 @@
             </div>
           </div>
           <div class="rounded-3xl border border-slate-200 bg-white p-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d489597.8388720261!2d80.648415!3d16.52695!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff86526bfd3%3A0xda02e1707dff2bdc!2sJk%20soft!5e0!3m2!1sen!2sus!4v1770215481711!5m2!1sen!2sus" width="600" height="450" style="border:0; width:100%; height:320px; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d489597.8388720261!2d80.648415!3d16.52695!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff86526bfd3%3A0xda02e1707dff2bdc!2sJk%20soft!5e0!3m2!1sen!2sus!4v1770215481711!5m2!1sen!2sus"
+              width="600" height="450" style="border:0; width:100%; height:320px; border-radius:20px;"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -742,8 +764,9 @@
       <div class="mx-auto max-w-6xl px-6 py-16">
         <div class="grid gap-10 md:grid-cols-4">
           <div class="footer-col">
-            <img src="images/logo.svg" alt="JK Soft logo" class="h-20 w-auto" />
-            <p class="mt-2 text-sm text-white/70">Digital marketing and software solutions for growing businesses. We help brands build visibility, generate leads, and scale online.</p>
+            <img src="images/jk-logo-dark.png" alt="JK Soft logo" class="h-20 w-auto" />
+            <p class="mt-2 text-sm text-white/70">Digital marketing and software solutions for growing businesses. We
+              help brands build visibility, generate leads, and scale online.</p>
             <button type="button" class="btn btn-primary btn-small mt-6" data-quote-open>Request a Quote</button>
           </div>
           <div class="footer-col">
@@ -766,9 +789,9 @@
           <div class="footer-col">
             <p class="footer-label">Contact</p>
             <div class="mt-4 space-y-2 text-sm text-white/70">
-              <a href="tel:+919247817555" class="block">Phone: +91 9247817555</a>
+              <a href="tel:+917569257998" class="block">Phone: +91 7569257998</a>
               <p>Hours: Mon-Fri 9am to 6pm</p>
-              <a href="https://wa.me/919247817555" class="inline-flex items-center gap-2 text-white">
+              <a href="https://wa.me/917569257998" class="inline-flex items-center gap-2 text-white">
                 <ion-icon name="logo-whatsapp"></ion-icon>
                 Chat with WhatsApp
               </a>
@@ -789,15 +812,16 @@
                   <ion-icon name="logo-youtube"></ion-icon>
                 </a>
               </div>
-              
+
             </div>
           </div>
         </div>
-        <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
+        <div
+          class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
           <span>© 2026 JK Soft. All rights reserved.</span>
           <div class="flex items-center gap-4">
-          <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
-          <a href="terms-and-conditions.html" class="hover:text-white">Terms & Conditions</a>
+            <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="hover:text-white">Terms & Conditions</a>
           </div>
         </div>
       </div>
@@ -811,18 +835,24 @@
         </button>
         <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Request a Quote</p>
         <h3 class="mt-3 text-2xl font-semibold text-ink">Tell us about your project</h3>
-        <form class="mt-6 grid gap-4">
+        <form class="mt-6 grid gap-4" action="send-email.php" method="post">
+          <input type="hidden" name="form_type" value="Modal Quote Form">
           <div>
             <label class="text-sm text-slate-600">Name</label>
-            <input type="text" class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent" placeholder="Your name" />
+            <input type="text" name="name"
+              class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent"
+              placeholder="Your name" required />
           </div>
           <div>
             <label class="text-sm text-slate-600">Phone</label>
-            <input type="tel" class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent" placeholder="+91" />
+            <input type="tel" name="phone"
+              class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent"
+              placeholder="+91" required />
           </div>
           <div>
             <label class="text-sm text-slate-600">Service Required</label>
-            <select class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent">
+            <select name="service"
+              class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent">
               <option>Website Design & Development</option>
               <option>Digital Marketing</option>
               <option>E-Commerce</option>
@@ -833,7 +863,9 @@
           </div>
           <div>
             <label class="text-sm text-slate-600">Message</label>
-            <textarea rows="4" class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent" placeholder="Tell us your requirements"></textarea>
+            <textarea rows="4" name="message"
+              class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-ink outline-none focus:border-accent"
+              placeholder="Tell us your requirements"></textarea>
           </div>
           <button type="submit" class="btn btn-primary w-full justify-center">Submit</button>
         </form>
@@ -841,9 +873,10 @@
     </div>
   </main>
 
-  <div id="stickyBar" class="sticky-bar fixed bottom-6 left-1/2 z-40 w-[92%] max-w-xl -translate-x-1/2 translate-y-10 rounded-full border border-slate-200 bg-white px-4 py-3 opacity-0 transition duration-500">
+  <div id="stickyBar"
+    class="sticky-bar fixed bottom-6 left-1/2 z-40 w-[92%] max-w-xl -translate-x-1/2 translate-y-10 rounded-full border border-slate-200 bg-white px-4 py-3 opacity-0 transition duration-500">
     <div class="flex items-center justify-between text-sm">
-      <a href="tel:+919247817555" class="flex items-center gap-2 text-white/90">
+      <a href="tel:+917569257998" class="flex items-center gap-2 text-white/90">
         <ion-icon name="call-outline" class="text-lg"></ion-icon>
         <span class="hidden sm:inline">Phone</span>
       </a>
@@ -853,7 +886,7 @@
         <span class="hidden sm:inline">Enquire</span>
       </a>
       <span class="h-6 w-px bg-white/20"></span>
-      <a href="https://wa.me/919247817555" class="flex items-center gap-2 text-white/90">
+      <a href="https://wa.me/917569257998" class="flex items-center gap-2 text-white/90">
         <ion-icon name="logo-whatsapp" class="text-lg"></ion-icon>
         <span class="hidden sm:inline">WhatsApp</span>
       </a>
@@ -864,4 +897,5 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
